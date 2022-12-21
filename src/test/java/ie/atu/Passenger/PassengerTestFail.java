@@ -18,6 +18,13 @@ class PassengerTestFail {
         assertEquals("This is not a valid name. Use Mr, Ms or Mrs.", exMessage.getMessage());
     }
 
+    @Test
+    void testNameFail(){
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {new Passenger("Mr", "ls", 1235422173822L, 1222222223, 19);});
+        assertEquals("This is not a valid name.", exMessage.getMessage());
+    }
+
+
 
     @AfterEach
     void tearDown() {
