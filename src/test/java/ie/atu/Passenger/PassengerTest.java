@@ -2,6 +2,7 @@ package ie.atu.Passenger;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -23,6 +24,11 @@ class PassengerTest {
         myPassenger.setTitle("Mrs");
         assertEquals("Mrs", myPassenger.getTitle());
 
+    }
+
+    @Test
+    void testNamePass(){
+        assertEquals("John Doe", myPassenger.getName());
     }
 
     @AfterEach
