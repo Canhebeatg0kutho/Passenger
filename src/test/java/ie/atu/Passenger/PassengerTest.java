@@ -15,6 +15,16 @@ class PassengerTest {
 
     }
 
+    @Test
+    void testTitlePass(){
+        assertEquals("Mr", myPassenger.getTitle());
+        myPassenger.setTitle("Ms");
+        assertEquals("Ms", myPassenger.getTitle());
+        myPassenger.setTitle("Mrs");
+        assertEquals("Mrs", myPassenger.getTitle());
+
+    }
+
     @AfterEach
     void tearDown() {
     }
