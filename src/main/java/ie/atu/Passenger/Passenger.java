@@ -21,7 +21,12 @@ public class Passenger {
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        if("Mr".equalsIgnoreCase(title) || "Mrs".equalsIgnoreCase(title) || "Ms".equalsIgnoreCase(title)){
+            this.title = title;
+        }
+        else {
+            throw new IllegalArgumentException("This is not a valid name. Use Mr, Ms or Mrs.");
+        }
     }
 
     public String getName() {
@@ -29,7 +34,12 @@ public class Passenger {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if(name.length() >= 3){
+            this.name = name;
+        }
+        else{
+            throw new IllegalArgumentException("This is not a valid name.");
+        }
     }
 
     public long getId() {
@@ -37,7 +47,12 @@ public class Passenger {
     }
 
     public void setId(long id) {
-        this.id = id;
+        if(String.valueOf(id).length() >= 10){
+            this.id = id;
+        }
+        else{
+            throw new IllegalArgumentException("This is not a valid ID.");
+        }
     }
 
     public long getPhone() {
@@ -45,7 +60,12 @@ public class Passenger {
     }
 
     public void setPhone(long phone) {
-        this.phone = phone;
+        if(String.valueOf(phone).length() >= 7){
+            this.phone = phone;
+        }
+        else{
+            throw new IllegalArgumentException("This is not a valid phone number.");
+        }
     }
 
     public int getAge() {
@@ -53,6 +73,11 @@ public class Passenger {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if(age > 16){
+            this.age = age;
+        }
+        else{
+            throw new IllegalArgumentException("You must be over 16.");
+        }
     }
 }
