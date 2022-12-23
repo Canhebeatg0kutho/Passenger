@@ -12,7 +12,7 @@ class PassengerTestPass {
 
     @BeforeEach
     void setUp() {
-        myPassenger = new Passenger("Mr", "John Doe", 1234334567891L, 1233456789, 42);
+        myPassenger = new Passenger("Mr", "John Doe", "1234334567891L", 1233456789, 42);
 
     }
 
@@ -33,7 +33,7 @@ class PassengerTestPass {
 
     @Test
     void testIdPass(){
-        assertEquals(1234334567891L, myPassenger.getId());
+        assertEquals("1234334567891L", myPassenger.getId());
     }
 
     @Test
